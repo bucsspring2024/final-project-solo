@@ -2,8 +2,8 @@
 
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 
-# << Project Title >>
-## CS110 Final Project  << Semester, Year >>
+#  LOTTERY MACHINE 
+## CS110 Final Project   SPRING, 2024 
 
 ## Team Members
 
@@ -13,7 +13,7 @@ Lhakpa Sherpa
 
 ## Project Description
 
-The goal of this project is to make a lottery game. Where initally the user inputs, how much money they wish to spend on lottery tickets. Then follows a screen of a Lottery Ticket Machine, with two available tickets for purchase (Ticket_One:$10, Ticket_Two: $5), which the user can click on, taking them to an interactable lottery scratcher. The program allows the user to decide whether they wish to continue playing the lottery by asking if the user wishes to buy another ticket after playing each round of the lottery, or until their inital balance runs out. The program also keeps track of how much money the user has spent, their profits/losses from all their tickets, and displays a final message, which depends on the user's profit/loss from playing the lottery. 
+The goal of this project is to make a lottery arcade game. Where the user inputs, how much money they wish to spend on lottery tickets. Once a number greater than 5 is typed and entered, there will be two available tickets for purchase (Ticket_One:$10, Ticket_Two: $5), which the user can click on, taking them to an interactable lottery scratcher or powerball-like game. The program allows the user to decide whether they wish to continue playing the lottery by providing an end game button. The program also keeps track of how much money the user has spent, their profits/losses from all their tickets, and displays a final message, which depends on the user's profit/loss from playing the lottery. 
 
 ***    
 
