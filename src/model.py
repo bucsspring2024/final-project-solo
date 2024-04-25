@@ -58,26 +58,36 @@ class LotteryModel:
     
     def calculate_winnings(self):
         # Check for matches and update winnings accordingly
+        self.ticket_winnings = 0
         match_count = len(set(self.your_jackpot_numbers) & set(self.jackpot_numbers))
         if match_count == 0 and self.your_jackpot_ball_number == self.jackpot_ball_number:
+            self.ticket_winnings = 3
             self.winnings += 3
-        if match_count == 1 and self.your_jackpot_ball_number == self.jackpot_ball_number:
+        elif match_count == 1 and self.your_jackpot_ball_number == self.jackpot_ball_number:
+            self.ticket_winnings = 3
             self.winnings += 3
         elif match_count == 2 and self.your_jackpot_ball_number == self.jackpot_ball_number:
+            self.ticket_winnings = 7
             self.winnings += 7
         elif match_count == 3 and self.your_jackpot_ball_number != self.jackpot_ball_number:
+            self.ticket_winnings = 7
             self.winnings += 7
         elif match_count == 3 and self.your_jackpot_ball_number == self.jackpot_ball_number:
+            self.ticket_winnings = 100
             self.winnings += 100
         elif match_count == 4 and self.your_jackpot_ball_number != self.jackpot_ball_number:
+            self.ticket_winnings = 100
             self.winnings += 100
         elif match_count == 4 and self.your_jackpot_ball_number == self.jackpot_ball_number:
+            self.ticket_winnings = 1000
             self.winnings += 1000
         elif match_count == 5 and self.your_jackpot_ball_number != self.jackpot_ball_number:
+            self.ticket_winnings = 5000
             self.winnings += 5000
         elif match_count == 5 and self.your_jackpot_ball_number == self.jackpot_ball_number:
+            self.ticket_winnings = 10000
             self.winnings += 10000
-        return self.winnings
+        return self.ticket_winnings
         
         
     

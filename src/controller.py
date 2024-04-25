@@ -109,7 +109,6 @@ class Controller:
                     if not self.winnings_displayed:
                         self.model.winnings += self.last_winnings
                         self.view.display_winnings(self.last_winnings)  # Ensure display matches the final winnings
-                        self.winnings_displayed = True
                     # Reset the game state and prepare for a new game or exit
                     self.model.reset_pot_ticket()
                     self.view.reset_surfaces()
@@ -120,13 +119,11 @@ class Controller:
         elif self.state == 'WOLVES':
             if not self.winnings_displayed:
                 self.view.draw_brook_surface(self.model.jackpot_numbers, self.model.jackpot_ball_number, self.model.your_jackpot_numbers, self.model.your_jackpot_ball_number)
-                self.view.draw_fake_barcode(self.barcode_scratched)
-                self.model.calculate_winnings()
+                self.view.display_winnings(self.model.calculate_winnings())
                 self.winnings_displayed = True
             elif event.type == pygame.MOUSEMOTION and self.view.barcode_rect.collidepoint(event.pos):
                 self.barcode_scratched = True
             self.view.draw_fake_barcode(self.barcode_scratched)
-            self.view.display_winnings(self.model.calculate_winnings())
             if self.barcode_scratched == True and event.type == pygame.MOUSEBUTTONDOWN:
                 if self.view.exit_rect.collidepoint(event.pos):
                     self.model.reset_wolves_ticket()
