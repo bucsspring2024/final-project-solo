@@ -52,12 +52,15 @@ The goal of this project is to make a lottery arcade game. In the game, the user
 |                      |      enter key       |                                   |
 |  3                   |    click on either   |       Display ticket screen       |
 |                      | image of the tickets |                                   |
-|  4                   |   hover mouse over   |                                   |
-|                      |   bottom left rect   |      Display next page Rect       |
-|  5                   |   click on top-left  |        Display game screen        |
+|  4                   | if Binghamton pot,   |      Display Numbers with Values  |
+|                      |  collide with grey   |                                   |
+|                      |         rects        |                                   |
+|  5                   |     collide with     |       Display next page Rect      |
+|                      |   bottom right rect  |                                   |
+|  6                   |   click on top-left  |        Display game screen        |
 |                      |         rect         |                                   |
-|  6                   |  click bottom right  |        Display end game screen    |
+|  7                   |  click bottom right  |        Display end game screen    |
 |                      |         rect         |                                   |
-|  7                   |    click exit rect   |            End Program            |
+|  8                   |    click exit rect   |            End Program            |
 
 
