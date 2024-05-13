@@ -1,4 +1,5 @@
 import random
+import os
 class LotteryModel:
     def __init__(self):
         #Give the inital numbers for each tickets
@@ -19,6 +20,11 @@ class LotteryModel:
         
     def score_history(self):
         # Adjusts the high_score as needed (Data Permanence)
+        if not os.path.exists(self.file_path):
+            file = open(self.file_path, 'w')
+            file.write('0')
+            file.close()
+            
         file = open(self.file_path, "r")
         contents = file.read()
         file.close()
@@ -27,7 +33,10 @@ class LotteryModel:
             file = open(self.file_path, 'w')
             file.write(str(self.winnings))
             file.close()
-        else:
+        elif self.current_winnings == '':
+            file.open(self.file_path, 'w')
+            file.write('0')
+            file.close()
             pass
         return self.current_winnings
 
